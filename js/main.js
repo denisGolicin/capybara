@@ -1,16 +1,22 @@
-// window.addEventListener('touchstart', () => { console.log('start') }); // el.ontouchstart = () => { console.log('start') };
-// window.addEventListener('touchend', () => { console.log('end') }); // el.ontouchstart = () => { console.log('start') };
-// window.addEventListener('touchmove', () => { 
-//     document.body.style.display = "none";
-//  }); // el.ontouchstart = () => { console.log('start') };
-// window.addEventListener('touchcancel', () => { console.log('cancel') });
+// // window.addEventListener('touchstart', () => { console.log('start') }); // el.ontouchstart = () => { console.log('start') };
+// // window.addEventListener('touchend', () => { console.log('end') }); // el.ontouchstart = () => { console.log('start') };
+// // window.addEventListener('touchmove', () => { 
+// //     document.body.style.display = "none";
+// //  }); // el.ontouchstart = () => { console.log('start') };
+// // window.addEventListener('touchcancel', () => { console.log('cancel') });
 let buttonActive;
+let buttonActiveStories;
 let isMobile = true;
 let isComp = false;
 let buttonid = 0;
+let buttonidStories = 0;
 
 let buttonsYouGet = [];
 buttonsYouGet = document.querySelectorAll('.block-youGet-elements-curcle');
+
+let buttonsStories = [];
+buttonsStories = document.querySelectorAll('.block-stories-curcle');
+
 
 let buttonsWeDo = [];
 buttonsWeDo = document.querySelectorAll('.block-weDo-curcle');
@@ -20,22 +26,26 @@ console.log(buttonsWeDo + " " + buttonsWeDo.length)
 let blocksYouGet = [];
 blocksYouGet = document.querySelectorAll('.block-youGet-container');
 
+let blocksStories = [];
+blocksStories = document.querySelectorAll('.block-stories-border');
+
 let blocksWeDo = [];
 blocksWeDo = document.querySelectorAll('.block-weDo-elements');
 
 window.onload = function(){
-    if(this.screen.availWidth > 774) {
+    if(this.screen.availWidth >= 774) {
         isMobile = false;
         isComp = true;
     }
     else{
         isMobile = true;
         isComp = false;
+        blocksWeDo[1].classList.add('weDo-hide');
     }
 }
 
 window.addEventListener('resize', function() {
-    if(this.screen.availWidth > 774) {
+    if(this.screen.availWidth >= 774) {
         if(isMobile && !isComp){
             console.log("updateComp")
             updateblocksYouGetComp();
@@ -62,10 +72,12 @@ for(let i = 0; i < buttonsYouGet.length; i++){
         buttonOldActive = 0;
     }
 
-    if(window.screen.availWidth > 774){
+    if(window.screen.availWidth >= 774){
         //ПК
-        if(i >= 3) continue;
-        blocksYouGet[i].classList.remove('youGet-hide');
+        if(i < 3) {
+            blocksYouGet[i].classList.remove('youGet-hide');
+        }
+        
     }
     else{
         blocksYouGet[0].classList.remove('youGet-hide');
@@ -82,7 +94,28 @@ for(let i = 0; i < buttonsYouGet.length; i++){
         console.log("click" + i)
     })
 }
+//
+for(let i = 0; i < buttonsStories.length; i++){
+    
+    if(buttonsStories[i].classList.contains('stories-button-active')){
+        buttonActiveStories = buttonsStories[i];
+    }
 
+    buttonsStories[i].addEventListener('click', function() {
+        if(this.classList.contains('stories-button-active')) return;
+
+        blocksStories[buttonidStories].classList.add('stories-hide');
+        blocksStories[i].classList.remove('stories-hide');
+
+        this.classList.add('stories-button-active');
+        buttonActiveStories.classList.remove('stories-button-active');
+        buttonActiveStories = this;
+        buttonidStories = i;
+
+        console.log("click stories" + i)
+    })
+}
+//
 buttonsWeDo[0].addEventListener('click', function(){
     if(this.classList.contains('weDo-button-active')) return;
     this.classList.add('weDo-button-active');
@@ -163,6 +196,7 @@ function changeBlockYouGet(_new, _old){
 }
 
 function updateblocksYouGetComp(){
+
     blocksWeDo[0].classList.remove('weDo-hide');
     blocksWeDo[1].classList.remove('weDo-hide');
     console.log("update compsuka!!!!")
@@ -179,6 +213,11 @@ function updateblocksYouGetComp(){
     buttonid = 0;
 }
 function updateblocksYouGetMobile(){
+    blocksWeDo[0].classList.remove('weDo-hide');
+    blocksWeDo[1].classList.add('weDo-hide');
+
+    buttonsWeDo[0].classList.add('weDo-button-active');
+    buttonsWeDo[1].classList.remove('weDo-button-active');
     console.log("updatemob suka")
     for(let i = 0; i < buttonsYouGet.length; i++){
         console.log('eblan')

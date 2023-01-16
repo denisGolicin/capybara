@@ -29,7 +29,7 @@
 }
 @media (max-width: 920px){
     .block-weDo-text{
-        font-size: 22px;
+        font-size: 19px;
     }
     .block-stories-buttons-text{
         font-size: 30px;
@@ -54,26 +54,12 @@
         margin-left: 5px;
         margin-right: 5px;
     }
+
     .block-weDo>p{
         font-size: 90px;
     }
-    .block-weDo-content{
-        position: relative;
-    }
-    .block-weDo-elements{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-    .block-weDo-icon{
-        justify-content: center;
-    }
-    .curcle-mobile{   
-        display: block;
-    }
 }
-@media (max-width: 774px) {
+@media (max-width: 773px) {
 	.block-title-up{
         flex-direction: column;
     }
@@ -165,6 +151,18 @@
 
     .block-weDo>p {
         font-size: 70px;
+    }
+    .block-weDo-content{
+        position: relative;
+    }
+    .block-weDo-elements{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .block-weDo-icon{
+        justify-content: center;
     }
 
     .block-stories-buttons{
