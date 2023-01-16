@@ -486,8 +486,7 @@ main{
     width: 620px;
     height: 620px;
     opacity: 0.25;
-    -webkit-filter: blur(125px);
-            filter: blur(125px);
+
     
     top: 50%;
     left: 40%;
@@ -497,8 +496,7 @@ main{
     width: 426px;
     height: 426px;
     opacity: 0.4;
-    -webkit-filter: blur(100px);
-            filter: blur(100px);
+    
     top: 50%;
     left: 0;
 }
@@ -720,8 +718,7 @@ main{
     width: 426px;
     height: 426px;
     opacity: 0.4;
-    -webkit-filter: blur(100px);
-            filter: blur(100px);
+    
     top: -6%;
     left: 60%;
 }
@@ -886,11 +883,7 @@ main{
             transform: translateY(-50px);
     cursor: pointer;
     opacity: .4;
-    -webkit-transition: -webkit-filter 1s;
-    transition: -webkit-filter 1s;
-    -o-transition: filter 1s;
-    transition: filter 1s;
-    transition: filter 1s, -webkit-filter 1s;
+   
 }
 .block-stories-curcle:first-child{
     margin-right: 10px;
