@@ -388,8 +388,30 @@
         width: 102px;
         height: 84px;
     }
+    .block-with-card{
+        width: 45% !important;
+    }
 }
 @media (max-width: 595px){
+    .block-with-card{
+        width: 60% !important;
+    }
+    .bsw-five{
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 20px !important;
+        margin-top: 45px !important;
+    }
+    .bsw-img{
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .bsw-topaz{
+        width: 100px !important;
+        height: 40px !important;
+        margin-right: 30px !important;
+        margin-top: 45px !important;
+    }
     .block-youGet-container>p{
         font-size: 17px !important;
     }
@@ -397,7 +419,7 @@
         display: none;
     }
     .bsw-button>p{
-        font-size: 15px;
+        font-size: 14px;
     }
     .bsw-padding{
         padding: 0 !important;
@@ -411,6 +433,10 @@
     }
     .block-stories-title>p{
         font-size: 50px;
+    }
+    .block-stories-title{
+        padding-left: 0; 
+        padding-right: 0;
     }
     .block-stories-container-title{
         flex-direction: column;
@@ -426,7 +452,7 @@
     }
     
     .block-stories-container-img>img {
-        width: 80px;
+        width: 100px;
         height: 20px;
         margin-right: 25px;
     }
@@ -437,7 +463,7 @@
         font-size: 15px;
     }
     .block-team-elements:nth-child(1){
-        font-size: 70px;
+        font-size: 50px;
     }
     .block-map-img>img {
         width: 580px;
@@ -445,6 +471,9 @@
     }
 }
 @media (max-width: 500px) {
+    .block-with-card{
+        width: 80% !important;
+    }
     .block-stories-container{
         width: 655px;
     }
@@ -472,6 +501,10 @@
     
 }
 @media (max-width: 374px){
+    /* .block-stories-container{
+        padding: 20px !important;
+        height: 40px !important;
+    } */
     .block-title-img>img {
         width: 300px;
         height: 334px;
@@ -498,8 +531,8 @@
     }
 
     .block-stories-container-img>img {
-        width: 70px;
-        height: 20px;
+        width: 90px;
+        height: 18px;
         justify-content: left;
     }
     .block-stories-container-text{
@@ -512,7 +545,7 @@
         font-size: 13px;
     }
     .bsw-button>p{
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .block-team-elements:nth-child(1){

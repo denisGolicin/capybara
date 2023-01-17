@@ -72,6 +72,7 @@ window.onload = function(){
     }
 }
 
+
 window.addEventListener('resize', function() {
     if(window.matchMedia('(max-width: 774px)').matches) {
         if(!isMobile && isComp){
@@ -366,6 +367,17 @@ function updateblocksYouGetComp(){
     buttonActive = buttonsYouGet[0];
     buttonid = 0;
 
+    for(let i = 0; i < buttonsTeam.length; i++){
+        buttonsTeam[i].classList.remove("team-button-active");
+        blocksTeam[i].classList.add("team-hide");
+    }
+    blocksTeam[0].classList.remove("team-hide");
+    blocksTeam[1].classList.remove("team-hide");
+    blocksTeam[2].classList.remove("team-hide");
+    buttonsTeam[0].classList.add("team-button-active");
+    buttonActiveTeam = buttonsTeam[0];
+    buttonidTeam = 0;
+
     for(let i = 0; i < buttonsWith.length; i++){
         buttonsWith[i].classList.remove("with-button-active");
         blocksWith[i].classList.remove("with-hide");
@@ -397,6 +409,15 @@ function updateblocksYouGetMobile(){
     buttonsWith[0].classList.add("with-button-active");
     blocksWith[0].classList.remove("with-hide");
     buttonActiveWith = buttonsWith[0];
+
+    for(let i = 0; i < buttonsTeam.length; i++){
+        buttonsTeam[i].classList.remove("team-button-active");
+        blocksTeam[i].classList.add("team-hide");
+    }
+    blocksTeam[0].classList.remove("team-hide");
+    buttonsTeam[0].classList.add("team-button-active");
+    buttonActiveTeam = buttonsTeam[0];
+    buttonidTeam = 0;
 
 }
 
