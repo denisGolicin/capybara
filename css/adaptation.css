@@ -7,6 +7,76 @@
         height: 480px;
     }
 }
+@media (max-width: 1202px) {
+    .block-youGet-container>p{
+        font-size: 17px;
+    }
+    .with-card-title>p{
+        font-size: 23px;
+    }
+}
+@media (max-width: 1120px){
+    .block-youGet-content>p{
+        font-size: 20px;
+    }
+}
+@media (max-width: 1044px){
+    .block-youGet-container>p{
+        font-size: 15px;
+    }
+    #ultimate-t{
+        font-size: 18px;
+    }
+    .with-card-title>p{
+        font-size: 20px;
+    }
+    .with-card{
+        height: 750px;
+    }
+    .with-main-text {
+        font-size: 15px;
+    }
+}
+@media (max-width: 930px){
+    #ultimate-t{
+        font-size: 18px;
+    }
+    .with-card-title>p{
+        margin-left: 10px;
+    }
+    .with-card-title>p{
+        font-size: 18px;
+    }
+    .with-text-will {
+        margin-top: 10px;
+    }
+    .with-card-title {
+        height: 7%;
+    }
+    .with-dutation {
+        padding-top: 0;
+        padding: 10px;
+        font-size: 17px;
+    }
+    .with-price {
+        padding-top: 0;
+        padding: 10px;
+        font-size: 17px;
+    }
+    .with-card{
+        height: 600px;
+    }
+}
+@media (max-width: 850px){
+    #ultimate-t{
+        font-size: 16px;
+    }
+}
+@media (max-width: 864px){
+    .block-youGet-container>p{
+        font-size: 13px !important;
+    }
+}
 @media (max-width: 1143px) {
 	.block-stories-container-img>img {
         width: 100px;
@@ -21,13 +91,30 @@
     .bsw-title{
         font-size: 20px;
     }
+    .team-icon>img{
+        width: 90px;
+        height: 90px;
+    }
 }
 @media (max-width: 955px){
     .block-stories-border{
         width: 90%;
     }
+    .team-name{
+        font-size: 20px;
+    }
+    .team-text>p{
+        font-size: 15px;
+    }
+    .block-team{
+        height: 700px;
+    }
 }
 @media (max-width: 920px){
+    .team-icon>img{
+        width: 80px;
+        height: 80px;
+    }
     .block-weDo-text{
         font-size: 19px;
     }
@@ -36,6 +123,14 @@
     }
 }
 @media (max-width: 916px) {
+    .header-elements>a {
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 20px;
+    }
 	.block-title-text>p{
         font-size: 50px;
     }
@@ -59,7 +154,16 @@
         font-size: 90px;
     }
 }
-@media (max-width: 773px) {
+@media (max-width: 857px){
+    .bsw-button>p{
+        font-size: 20px;
+    }
+    .team-icon>img{
+        width: 70px;
+        height: 70px;
+    }
+}
+@media (max-width: 774px) {
 	.block-title-up{
         flex-direction: column;
     }
@@ -90,7 +194,7 @@
         display: none;
     }
     .header-burger{
-        display: block;
+        display: flex;
     }
     .youGet-one{
         left: 50%;
@@ -110,6 +214,9 @@
     .youGet-hide{
         left: 50%;
         transform: translate(100%, -50%);
+    }
+    .block-youGet-container>p{
+        font-size: 21px !important;
     }
     .curcle-mobile{   
         display: block;
@@ -160,6 +267,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        padding: 30px;
     }
     .block-weDo-icon{
         justify-content: center;
@@ -174,9 +282,126 @@
     .block-stories-curcle-wp{
         display: flex;
     }
-    
+    .block-stories-container{
+        width: 590px;
+    }
+    .block-stories-title {
+        font-size: 70px;
+    }
+
+    .team-one{
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+    }
+    .team-two{
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+    }
+    .team-three{
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+    }
+    .team-text>p {
+        font-size: 24px;
+    }
+    .team-icon {
+        width: 35%;
+    }
+    .team-name {
+        font-size: 25px;
+    }
+    .team-icon>img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .team-curcle:first-child{
+        margin-right: 10px;
+    }
+    .team-curcle:nth-child(2){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .team-curcle:nth-child(3){
+        margin-left: 10px;
+        margin-right: 10x;
+    }
+    .team-curcle:nth-child(4){
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .team-curcle:nth-child(5){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .team-curcle:nth-child(6){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .team-curcle:nth-child(7){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .team-curcle:nth-child(8){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .team-curcle:last-child{
+        margin-left: 10px;
+    }
+    .block-with{
+        height: 700px;
+    }
+    .block-with-card:nth-child(1), .block-with-card:nth-child(2), .block-with-card:nth-child(3), .block-with-card:nth-child(4){
+        width: 80%;
+        left: 50% ;
+        transform: translate(-50%, -50%);
+    }
+    .block-with-elements:nth-child(1)>p {
+        font-size: 70px;
+    }
+    .with-card-title>p {
+        font-size: 25px;
+    }
+    .with-card-title {
+        height: 12%;
+    }
+    .with-text-will{
+        font-size: 25px;
+    }
+    .with-main-text {
+        font-size: 20px;
+    }
+    .with-dutation{
+        font-size: 20px;
+    }
+    .with-price{
+        font-size: 20px;
+    }
+    .block-with-elements:nth-child(1) {
+        height: 20%;
+    }
+    .load-block>img{
+        width: 102px;
+        height: 84px;
+    }
 }
 @media (max-width: 595px){
+    .block-youGet-container>p{
+        font-size: 17px !important;
+    }
+    .container-text-display{
+        display: none;
+    }
+    .bsw-button>p{
+        font-size: 15px;
+    }
+    .bsw-padding{
+        padding: 0 !important;
+    }
     .block-youGet-elements:nth-child(1){
         font-size: 60px;
         text-align: center;
@@ -218,6 +443,33 @@
         width: 580px;
         height: 250px;
     }
+}
+@media (max-width: 500px) {
+    .block-stories-container{
+        width: 655px;
+    }
+    .block-youGet-elements:nth-child(1) {
+        font-size: 50px;
+    }
+    .block-weDo>p {
+        font-size: 50px;
+    }
+    .team-text>p {
+        font-size: 15px;
+    }
+    .team-icon {
+        width: 45%;
+    }
+    .with-text-will {
+        font-size: 20px;
+    }
+    .block-with-elements:nth-child(1)>p {
+        font-size: 50px;
+    }
+    .block-with{
+        height: 800px;
+    }
+    
 }
 @media (max-width: 374px){
     .block-title-img>img {
