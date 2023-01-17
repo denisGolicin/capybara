@@ -384,6 +384,15 @@ function updateblocksYouGetComp(){
     }
     buttonsWith[0].classList.add("with-button-active");
     buttonActiveWith = buttonsWith[0];
+
+    for(let i = 0; i < buttonsStories2.length; i++){
+        buttonsStories2[i].classList.remove("stories-button-active");
+        blocksStories[i].classList.add("stories-hide");
+    }
+    blocksStories[1].classList.remove("stories-hide");
+    buttonsStories2[1].classList.add("stories-button-active");
+    buttonActiveStories = buttonsStories2[1];
+    buttonidStories2 = 1;
 }
 function updateblocksYouGetMobile(){
     blocksWeDo[0].classList.remove('weDo-hide');
@@ -418,6 +427,15 @@ function updateblocksYouGetMobile(){
     buttonsTeam[0].classList.add("team-button-active");
     buttonActiveTeam = buttonsTeam[0];
     buttonidTeam = 0;
+
+    for(let i = 0; i < buttonsStories.length; i++){
+        buttonsStories[i].classList.remove("stories-button-active");
+        blocksStories[i].classList.add("stories-hide");
+    }
+    blocksStories[1].classList.remove("stories-hide");
+    buttonsStories[1].classList.add("stories-button-active");
+    buttonActiveStories = buttonsStories[1];
+    buttonidStories = 1;
 
 }
 
