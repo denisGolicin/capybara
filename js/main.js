@@ -391,7 +391,7 @@ function updateblocksYouGetComp(){
     }
     blocksStories[1].classList.remove("stories-hide");
     buttonsStories2[1].classList.add("stories-button-active");
-    buttonActiveStories = buttonsStories2[1];
+    buttonActiveStories2 = buttonsStories2[1];
     buttonidStories2 = 1;
 }
 function updateblocksYouGetMobile(){

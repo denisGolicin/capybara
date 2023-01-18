@@ -16,6 +16,9 @@
     }
 }
 @media (max-width: 1120px){
+    .with-main-text{
+        font-size: 13px;
+    }
     .block-youGet-content>p{
         font-size: 20px;
     }
@@ -38,14 +41,28 @@
     .with-card{
         height: 750px;
     }
+    .block-with-card{
+        width: 22%;
+        padding: 10px;
+        font-size: 10px;
+    }
+    .block-with{
+        height: 1000px;
+    }
     .with-main-text {
         font-size: 15px;
     }
 }
-@media (max-width: 930px){
-    #ultimate-t{
-        font-size: 18px;
+@media (max-width: 950px){
+    .bsw-text {
+        font-size: 15px;
     }
+    .bsw-button>p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 930px){
+   
     .with-card-title>p{
         margin-left: 10px;
     }
@@ -92,7 +109,7 @@
     }
     
     .bsw-text{
-        font-size: 17px;
+        font-size: 14px;
     }
     .bsw-title{
         font-size: 20px;
@@ -185,15 +202,16 @@
         font-size: 10px;
         line-height: 18px;
     }
-    .bsw-button>p{
-        font-size: 20px;
-    }
+    
     .team-icon>img{
         width: 70px;
         height: 70px;
     }
 }
 @media (max-width: 774px) {
+    .block-team{
+        height: 800px;
+    }
     .block-last-el>img {
         width: 238px;
         height: 315px;
@@ -256,7 +274,7 @@
 
 
     .team-text>p{
-        line-height: 24px;
+        line-height: 25px;
     }
 	.block-title-up{
         flex-direction: column;
@@ -399,7 +417,7 @@
         transform: translate(-50%, -50%);
     }
     .team-text>p {
-        font-size: 24px;
+        font-size: 20px;
     }
     .team-icon {
         width: 35%;
@@ -463,10 +481,11 @@
     .with-card-title {
         height: 12%;
     }
-    .with-text-will{
-        font-size: 25px;
-    }
     .with-main-text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .with-text-will {
         font-size: 20px;
     }
     .with-dutation{
@@ -627,6 +646,10 @@
         padding: 20px !important;
         height: 40px !important;
     } */
+    .team-text>p{
+        line-height: 23px;
+        font-size: 13px;
+    }
     .block-title-img>img {
         width: 300px;
         height: 334px;

@@ -1060,7 +1060,8 @@ main{
     opacity: 1;
     transition: opacity 1s;
     font-family: 'MullerLight';
-    line-height: 18px;
+    line-height: 24px;
+    padding: 15px;
 }
 .block-with-card:nth-child(1){
     left: 5%;
@@ -1106,7 +1107,7 @@ main{
     font-weight: bold;
 }
 .with-text-will{
-    margin-top: 30px;
+    margin-top: 0px;
     color: var(--main-color);
     padding: 10px;
     font-size: 20px;
@@ -1116,9 +1117,10 @@ main{
 }
 .with-main-text{
     padding: 20px;
-    font-size: 17px;
+    font-size: 15px;
     padding-top: 0;
     opacity: .7;
+    line-height: 18px;
 }
 .with-dutation{
     padding: 10px;
