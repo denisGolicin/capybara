@@ -325,6 +325,20 @@ for(let i = 0; i < buttonsWith.length; i++){
     })
 }
 
+// let events = null;
+// document.addEventListener("touchstart", function (e) {
+//     events = e;
+// });
+// document.addEventListener("touchmove", function (e) {
+    
+// });
+// document.addEventListener("touched", function (e) {
+//     if (events) {
+//         alert("Move delta: " + (e.touches[0].pageY - events.touches[0].pageY))
+//     }
+//     events = null;
+// });
+
 let rad1 = document.getElementById('rad1');
 let rad2 = document.getElementById('rad2');
 let rad3 = document.getElementById('rad3');
@@ -332,13 +346,13 @@ let rad3 = document.getElementById('rad3');
 let result = "Make a Call";
 
 rad1.addEventListener("click", function(){
-    result = "Make a Call"
+    result = "Make a Call";
 })
 rad2.addEventListener("click", function(){
-    result = "WhatsApp"
+    result = "WhatsApp";
 })
 rad3.addEventListener("click", function(){
-    result = "Telegram"
+    result = "Telegram";
 })
 
 let area = document.getElementById('area');
@@ -380,9 +394,10 @@ sendTg.addEventListener("click", function(e){
         "Заявка с сайта!\n" +
         "Имя: " + String(name) + "\n" +
         "Телефон: " + String(phone) + "\n" +
-        "Способ связи:" + {result} + "\n" +
-        "Комментарий: " + {r}
+        "Способ связи: " + String(result) + "\n" +
+        "Комментарий: " + String(r)
     );
+    
 })
 // https://api.telegram.org/bot715125500:5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I/sendMessage?chat_id=-1001212271187&parse_mode=HTML&text=test
 function sendMessage(text)

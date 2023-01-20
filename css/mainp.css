@@ -1386,7 +1386,7 @@ main{
 
 .team-hide{
     opacity: 0;
-    left: 50%;
+
     z-index: 1;
 }
 
