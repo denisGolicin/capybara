@@ -324,14 +324,67 @@ for(let i = 0; i < buttonsWith.length; i++){
         console.log("click stories" + i)
     })
 }
+
+let rad1 = document.getElementById('rad1');
+let rad2 = document.getElementById('rad2');
+let rad3 = document.getElementById('rad3');
+
+let result = "Make a Call";
+
+rad1.addEventListener("click", function(){
+    result = "Make a Call"
+})
+rad2.addEventListener("click", function(){
+    result = "WhatsApp"
+})
+rad3.addEventListener("click", function(){
+    result = "Telegram"
+})
+
+let area = document.getElementById('area');
+
 let tg = {
     token: "5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I", 
     chat_id: "-1001212271187" 
 }
 let sendTg = document.getElementById('sendTg');
-sendTg.addEventListener("click", function(){
-    sendMessage("hello");
+sendTg.addEventListener("click", function(e){
+    e.preventDefault();
+
+    let info = document.forms.forma;
+    let name = info.elements.namr.value;
+    let phone = info.elements.phoneE.value;
+
+
+    if(String(name).length < 5){
+        console.log('govno name')
+        info.elements.namr.style.boxShadow = "0 0 5px red";
+        return;
+    }
+    else{
+        info.elements.namr.style.boxShadow = "none";
+    }
+    if(String(phone).length < 10){
+        console.log('govno phone')
+        info.elements.phoneE.style.boxShadow = "0 0 5px red";
+        return;
+    }
+    else{
+        info.elements.phoneE.style.boxShadow = "none";
+    }
+
+    console.log(result);
+    console.log(area.value);
+    let r = area.value;
+    sendMessage(
+        "Заявка с сайта!\n" +
+        "Имя: " + String(name) + "\n" +
+        "Телефон: " + String(phone) + "\n" +
+        "Способ связи:" + {result} + "\n" +
+        "Комментарий: " + {r}
+    );
 })
+// https://api.telegram.org/bot715125500:5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I/sendMessage?chat_id=-1001212271187&parse_mode=HTML&text=test
 function sendMessage(text)
 {
     const url = `https://api.telegram.org/bot${tg.token}/sendMessage` // The url to request
