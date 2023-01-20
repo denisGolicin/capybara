@@ -35,8 +35,6 @@ buttonsStories2 = document.querySelectorAll('.block-stories-buttons-item');
 
 let buttonsWeDo = [];
 buttonsWeDo = document.querySelectorAll('.block-weDo-curcle');
-console.log(buttonsWeDo + " " + buttonsWeDo.length)
-
 
 let blocksYouGet = [];
 blocksYouGet = document.querySelectorAll('.block-youGet-container');
@@ -52,6 +50,17 @@ blocksStories = document.querySelectorAll('.block-stories-border');
 
 let blocksWeDo = [];
 blocksWeDo = document.querySelectorAll('.block-weDo-elements');
+
+let burger = document.querySelector('.header-burger');
+let burgerMenu = document.querySelector('.block-nav-menu');
+
+let burgerLine = [];
+burgerLine = document.querySelectorAll('.burger-line');
+
+let withButton = [];
+withButton = document.querySelectorAll('.with-card-button');
+let formI = document.getElementById('formI');
+let closeForm = document.getElementById('closeForm');
 
 window.onload = function(){
     loadt = document.querySelector('.load-block');
@@ -92,6 +101,23 @@ window.addEventListener('resize', function() {
     }
 }, true);
 
+burger.addEventListener("click", function() {
+    console.log('burger')
+    if(burgerMenu.classList.contains('burger-hide')){
+        burgerMenu.classList.remove('burger-hide');
+
+        burgerLine[0].classList.add('line-up');
+        burgerLine[1].classList.add('line-border');
+        burgerLine[2].classList.add('line-down');
+    }
+    else{
+        burgerMenu.classList.add('burger-hide');
+        burgerLine[0].classList.remove('line-up');
+        burgerLine[1].classList.remove('line-border');
+        burgerLine[2].classList.remove('line-down');
+    }
+})
+
 for(let i = 0; i < buttonsTeam.length; i++){
     
     if(buttonsTeam[i].classList.contains('team-button-active')){
@@ -122,6 +148,15 @@ for(let i = 0; i < buttonsTeam.length; i++){
 }
 
 
+for(let i = 0; i < withButton.length; i++){
+    
+    withButton[i].addEventListener("click", function(){
+        formI.style.display = 'block';
+    })
+}
+closeForm.addEventListener("click", function(){
+    formI.style.display = 'none';
+})
 
 for(let i = 0; i < buttonsYouGet.length; i++){
     
@@ -142,6 +177,7 @@ for(let i = 0; i < buttonsYouGet.length; i++){
     buttonsYouGet[i].addEventListener('click', function() {
         if(this.classList.contains('youGet-button-active')) return;
 
+
         changeBlockYouGet(i, buttonid);
         this.classList.add('youGet-button-active');
         buttonActive.classList.remove('youGet-button-active');
@@ -151,6 +187,101 @@ for(let i = 0; i < buttonsYouGet.length; i++){
         console.log("click" + i)
     })
 }
+let weDoItem = [];
+weDoItem = document.querySelectorAll('.block-weDo-item');
+document.body.addEventListener("scroll", function () {
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight){
+        weDoItem[0].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[0].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 100){
+        weDoItem[1].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[1].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 300){
+        weDoItem[2].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[2].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 400){
+        weDoItem[3].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[3].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+        weDoItem[4].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[4].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 800){
+        weDoItem[5].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[5].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 1000){
+        weDoItem[6].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[6].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight ){
+        weDoItem[7].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[7].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 200){
+        weDoItem[8].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[8].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 450){
+        weDoItem[9].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[9].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+        weDoItem[10].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[10].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 800){
+        weDoItem[11].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[11].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 950){
+        weDoItem[12].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[12].style.borderColor = "#F3F8FE00";
+    }
+}, false);
 //
 for(let i = 0; i < buttonsStories.length; i++){
     
@@ -196,18 +327,18 @@ for(let i = 0; i < buttonsWith.length; i++){
 
 for(let i = 0; i < buttonsStories2.length; i++){
     
-    if(buttonsStories2[i].classList.contains('stories-button-active')){
+    if(buttonsStories2[i].style.opacity > '0.4'){
         buttonActiveStories2 = buttonsStories2[i];
     }
 
     buttonsStories2[i].addEventListener('click', function() {
-        if(this.classList.contains('stories-button-active')) return;
+        if(this.style.opacity > 0.4) return;
 
         blocksStories[buttonidStories2].classList.add('stories-hide');
         blocksStories[i].classList.remove('stories-hide');
 
-        this.classList.add('stories-button-active');
-        buttonActiveStories2.classList.remove('stories-button-active');
+        this.style.opacity = '1';
+        buttonActiveStories2.style.opacity = '0.4';
         buttonActiveStories2 = this;
         buttonidStories2 = i;
 
@@ -215,15 +346,26 @@ for(let i = 0; i < buttonsStories2.length; i++){
     })
 }
 //
+let d = [];
+    d = document.querySelectorAll('.block-weDo-elements');
+    d[0].style.zIndex = '3';
+    d[1].style.zIndex = '0';
 buttonsWeDo[0].addEventListener('click', function(){
+    console.log('wedo fsdfsd')
     if(this.classList.contains('weDo-button-active')) return;
     this.classList.add('weDo-button-active');
     blocksWeDo[0].classList.remove('weDo-hide');
 
     buttonsWeDo[1].classList.remove('weDo-button-active');
     blocksWeDo[1].classList.add('weDo-hide');
+    
+
+    d[1].style.zIndex = '0';
+    d[0].style.zIndex = '3';
 })
+
 buttonsWeDo[1].addEventListener('click', function(){
+    console.log('wedo fsdfsd')
     if(this.classList.contains('weDo-button-active')) return;
     this.classList.add('weDo-button-active');
     blocksWeDo[1].classList.remove('weDo-hide');
@@ -231,6 +373,8 @@ buttonsWeDo[1].addEventListener('click', function(){
     buttonsWeDo[0].classList.remove('weDo-button-active');
     blocksWeDo[0].classList.add('weDo-hide');
 
+    d[0].style.zIndex = '0';
+    d[1].style.zIndex = '3';
 
 })
 
@@ -294,7 +438,7 @@ function changeBlockYouGet(_new, _old){
 }
 
 function changeBlockTeam(_new, _old){
-    console.log(_new + " " + _old)
+    console.log(_new + " " + _old);
     if(isMobile){
         blocksTeam[_old].classList.add('team-hide');
         blocksTeam[_new].classList.remove('team-hide');
@@ -386,11 +530,11 @@ function updateblocksYouGetComp(){
     buttonActiveWith = buttonsWith[0];
 
     for(let i = 0; i < buttonsStories2.length; i++){
-        buttonsStories2[i].classList.remove("stories-button-active");
+        buttonsStories2[i].style.opacity = '0.4';
         blocksStories[i].classList.add("stories-hide");
     }
     blocksStories[1].classList.remove("stories-hide");
-    buttonsStories2[1].classList.add("stories-button-active");
+    buttonsStories2[1].style.opacity = '1';
     buttonActiveStories2 = buttonsStories2[1];
     buttonidStories2 = 1;
 }

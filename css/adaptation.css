@@ -600,6 +600,9 @@
     }
 }
 @media (max-width: 500px) {
+    .block-nav-menu>p{
+        font-size: 30px !important;
+    }
     .block-last-el:first-child {
         font-size: 15px;
     }
@@ -727,6 +730,9 @@
     }
     .block-why>p:last-child {
         padding: 30px;
+    }
+    .block-nav-menu{
+        font-size: 20px !important;
     }
 }
 
