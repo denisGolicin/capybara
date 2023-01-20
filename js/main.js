@@ -324,6 +324,27 @@ for(let i = 0; i < buttonsWith.length; i++){
         console.log("click stories" + i)
     })
 }
+let tg = {
+    token: "5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I", 
+    chat_id: "-1001212271187" 
+}
+let sendTg = document.getElementById('sendTg');
+sendTg.addEventListener("click", function(){
+    sendMessage("hello");
+})
+function sendMessage(text)
+{
+    const url = `https://api.telegram.org/bot${tg.token}/sendMessage` // The url to request
+    const obj = {
+        chat_id: tg.chat_id, // Telegram chat id
+        text: text // The text to send
+    };
+    const xht = new XMLHttpRequest();
+    xht.open("POST", url, true);
+    xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    xht.send(JSON.stringify(obj));
+}
+
 
 for(let i = 0; i < buttonsStories2.length; i++){
     
@@ -350,8 +371,9 @@ let d = [];
     d = document.querySelectorAll('.block-weDo-elements');
     d[0].style.zIndex = '3';
     d[1].style.zIndex = '0';
+    let b = document.getElementById('project');
+
 buttonsWeDo[0].addEventListener('click', function(){
-    console.log('wedo fsdfsd')
     if(this.classList.contains('weDo-button-active')) return;
     this.classList.add('weDo-button-active');
     blocksWeDo[0].classList.remove('weDo-hide');
@@ -362,10 +384,13 @@ buttonsWeDo[0].addEventListener('click', function(){
 
     d[1].style.zIndex = '0';
     d[0].style.zIndex = '3';
+
+    b.style.Height = "1000px";
+
+
 })
 
 buttonsWeDo[1].addEventListener('click', function(){
-    console.log('wedo fsdfsd')
     if(this.classList.contains('weDo-button-active')) return;
     this.classList.add('weDo-button-active');
     blocksWeDo[1].classList.remove('weDo-hide');
@@ -375,6 +400,8 @@ buttonsWeDo[1].addEventListener('click', function(){
 
     d[0].style.zIndex = '0';
     d[1].style.zIndex = '3';
+
+    b.style.Height = "1200px";
 
 })
 
