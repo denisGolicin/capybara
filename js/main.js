@@ -146,6 +146,78 @@ for(let i = 0; i < buttonsTeam.length; i++){
         console.log("click" + i)
     })
 }
+let h = document.querySelector('.block-team');
+h.addEventListener('touchstart', handleTouchStart5, false);        
+h.addEventListener('touchmove', handleTouchMove5, false);
+
+function getTouches5(evt) {
+return evt.touches ||             // browser API
+        evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                        
+function handleTouchStart5(evt) {
+    const firstTouch = getTouches5(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+                                                                        
+function handleTouchMove5(evt) {
+    if(!isMobile) return;
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                        
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* right swipe */ 
+            //alert('right')
+            if(buttonidTeam >= buttonsTeam.length -1) return;
+            let last = buttonidTeam;
+            buttonidTeam += 1;
+            
+            
+
+            changeBlockTeam(buttonidTeam, last);
+            
+            buttonsTeam[buttonidTeam].classList.add('team-button-active');
+            buttonActiveTeam.classList.remove('team-button-active');
+
+            buttonActiveTeam = buttonsTeam[buttonidTeam];
+            
+            
+            
+        } else {
+            /* left swipe */
+            if(buttonidTeam <= 0) return;
+            let last = buttonidTeam;
+            buttonidTeam -= 1;
+            
+            
+
+            changeBlockTeam(buttonidTeam, last);
+            buttonsTeam[buttonidTeam].classList.add('team-button-active');
+            buttonActiveTeam.classList.remove('team-button-active');
+
+            buttonActiveTeam = buttonsTeam[buttonidTeam];
+            
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* down swipe */ 
+        } else { 
+            /* up swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
 
 
 for(let i = 0; i < withButton.length; i++){
@@ -187,13 +259,12 @@ for(let i = 0; i < buttonsYouGet.length; i++){
         console.log("click" + i)
     })
 }
+let xDown = null;                                                        
+let yDown = null;
 
 a = document.querySelector('.block-youGet');
 a.addEventListener('touchstart', handleTouchStart, false);        
 a.addEventListener('touchmove', handleTouchMove, false);
-
-var xDown = null;                                                        
-var yDown = null;
 
 function getTouches(evt) {
 return evt.touches ||             // browser API
@@ -386,6 +457,83 @@ for(let i = 0; i < buttonsStories.length; i++){
     })
 }
 
+c = document.querySelector('.block-stories');
+c.addEventListener('touchstart', handleTouchStart3, false);        
+c.addEventListener('touchmove', handleTouchMove3, false);
+
+function getTouches3(evt) {
+return evt.touches ||             // browser API
+        evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                        
+function handleTouchStart3(evt) {
+    const firstTouch = getTouches3(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+                                                                        
+function handleTouchMove3(evt) {
+    if(!isMobile) return;
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                        
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* right swipe */ 
+            //alert('right')
+            if(buttonidStories >= 5) return;
+
+            blocksStories[buttonidStories].classList.add('stories-hide');
+            buttonActiveStories.classList.remove('stories-button-active');
+            
+
+            buttonidStories += 1;
+            buttonActiveStories = buttonsStories[buttonidStories];
+
+            blocksStories[buttonidStories].classList.add('stories-hide');
+            buttonActiveStories.classList.remove('stories-button-active');
+
+            blocksStories[buttonidStories].classList.remove('stories-hide');
+            buttonActiveStories.classList.add('stories-button-active');
+            
+            
+        } else {
+            /* left swipe */
+            if(buttonidStories <= 0) return;
+
+            blocksStories[buttonidStories].classList.add('stories-hide');
+            buttonActiveStories.classList.remove('stories-button-active');
+            
+
+            buttonidStories -= 1;
+            buttonActiveStories = buttonsStories[buttonidStories];
+
+            blocksStories[buttonidStories].classList.add('stories-hide');
+            buttonActiveStories.classList.remove('stories-button-active');
+
+            blocksStories[buttonidStories].classList.remove('stories-hide');
+            buttonActiveStories.classList.add('stories-button-active');
+            
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* down swipe */ 
+        } else { 
+            /* up swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
+
 for(let i = 0; i < buttonsWith.length; i++){
     
     if(buttonsWith[i].classList.contains('with-button-active')){
@@ -406,6 +554,82 @@ for(let i = 0; i < buttonsWith.length; i++){
         console.log("click stories" + i)
     })
 }
+
+g = document.querySelector('.block-with');
+g.addEventListener('touchstart', handleTouchStart4, false);        
+g.addEventListener('touchmove', handleTouchMove4, false);
+
+function getTouches4(evt) {
+return evt.touches ||             // browser API
+        evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                        
+function handleTouchStart4(evt) {
+    const firstTouch = getTouches4(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+                                                                        
+function handleTouchMove4(evt) {
+    if(!isMobile) return;
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                        
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* right swipe */ 
+            //alert('right')
+            if(buttonidWith >= 3) return;
+
+            blocksWith[buttonidWith].classList.add('with-hide');
+            buttonActiveWith.classList.remove('with-button-active');
+
+            buttonidWith += 1;
+            buttonActiveWith = buttonsWith[buttonidWith];
+
+            blocksWith[buttonidWith].classList.add('with-hide');
+            buttonActiveWith.classList.remove('with-button-active');
+
+            blocksWith[buttonidWith].classList.remove('with-hide');
+            buttonActiveWith.classList.add('with-button-active');
+            
+            
+            
+        } else {
+            /* left swipe */
+            if(buttonidWith <= 0) return;
+
+            blocksWith[buttonidWith].classList.add('with-hide');
+            buttonActiveWith.classList.remove('with-button-active');
+
+            buttonidWith -= 1;
+            buttonActiveWith = buttonsWith[buttonidWith];
+
+            blocksWith[buttonidWith].classList.add('with-hide');
+            buttonActiveWith.classList.remove('with-button-active');
+
+            blocksWith[buttonidWith].classList.remove('with-hide');
+            buttonActiveWith.classList.add('with-button-active');
+            
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* down swipe */ 
+        } else { 
+            /* up swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
 
 // let events = null;
 // document.addEventListener("touchstart", function (e) {
@@ -547,6 +771,76 @@ buttonsWeDo[0].addEventListener('click', function(){
 
 
 })
+
+b = document.querySelector('.block-weDo');
+b.addEventListener('touchstart', handleTouchStart2, false);        
+b.addEventListener('touchmove', handleTouchMove2, false);
+
+function getTouches2(evt) {
+return evt.touches ||             // browser API
+        evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                        
+function handleTouchStart2(evt) {
+    const firstTouch = getTouches2(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+                                                                        
+function handleTouchMove2(evt) {
+    if(!isMobile) return;
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                        
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* right swipe */ 
+            //alert('right')
+            
+            buttonsWeDo[1].classList.add('weDo-button-active');
+            blocksWeDo[1].classList.remove('weDo-hide');
+
+            buttonsWeDo[0].classList.remove('weDo-button-active');
+            blocksWeDo[0].classList.add('weDo-hide');
+
+            d[0].style.zIndex = '0';
+            d[1].style.zIndex = '3';
+
+            b.style.Height = "1200px";
+            
+        } else {
+            /* left swipe */
+            buttonsWeDo[0].classList.add('weDo-button-active');
+            blocksWeDo[0].classList.remove('weDo-hide');
+
+
+            buttonsWeDo[1].classList.remove('weDo-button-active');
+            blocksWeDo[1].classList.add('weDo-hide');
+    
+
+            d[1].style.zIndex = '0';
+            d[0].style.zIndex = '3';
+
+            b.style.Height = "1000px";
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* down swipe */ 
+        } else { 
+            /* up swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
 
 buttonsWeDo[1].addEventListener('click', function(){
     if(this.classList.contains('weDo-button-active')) return;
