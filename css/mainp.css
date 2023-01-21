@@ -1401,6 +1401,18 @@ main{
     z-index: 1;
 }
 
+.stories-bred-title{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: -7%;
+    opacity: .7;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: var(--main-color);
+    font-size: 20px;
+    text-align: center;
+}
 
 .block-map{
     width: 100%;

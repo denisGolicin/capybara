@@ -221,7 +221,15 @@
     }
 }
 @media (max-width: 774px) {
-    
+    .stories-bred-title{
+        display: block;
+    }
+    .bsw-t-b{
+        padding-top: 37px;
+    }
+    .block-weDo-text>p{
+        margin-left: 15px;
+    }
     .bsw-topaz{
         margin-top: 30px;
     }
@@ -474,6 +482,10 @@
     .block-stories-title {
         font-size: 70px;
         padding: 20px;
+        padding-top: 30px;
+    }
+    .block-stories-title{
+        transform: translateY(-30px);
     }
 
     .team-one{
@@ -666,7 +678,7 @@
     }
     .block-stories-container-img{
         width: 100%;
-        height: 25px;
+        height: 0;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: right;

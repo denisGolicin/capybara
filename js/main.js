@@ -61,6 +61,7 @@ let withButton = [];
 withButton = document.querySelectorAll('.with-card-button');
 let formI = document.getElementById('formI');
 let closeForm = document.getElementById('closeForm');
+let idWith;
 
 window.onload = function(){
     loadt = document.querySelector('.load-block');
@@ -224,6 +225,7 @@ for(let i = 0; i < withButton.length; i++){
     
     withButton[i].addEventListener("click", function(){
         formI.style.display = 'block';
+        idWith = i + 1;
     })
 }
 closeForm.addEventListener("click", function(){
@@ -692,6 +694,21 @@ sendTg.addEventListener("click", function(e){
     else{
         info.elements.phoneE.style.boxShadow = "none";
     }
+    let str;
+    switch(idWith){
+        case 1:{
+            str = "Consultation";
+        }
+        case 2:{
+            str = "Cost Effective";
+        }
+        case 3:{
+            str = "Best Offer";
+        }
+        case 4:{
+            str = "Premium Service";
+        }
+    }
 
     console.log(result);
     console.log(area.value);
@@ -701,6 +718,7 @@ sendTg.addEventListener("click", function(e){
         "Имя: " + String(name) + "\n" +
         "Телефон: " + String(phone) + "\n" +
         "Способ связи: " + String(result) + "\n" +
+        "Тариф: " + str + "\n" +
         "Комментарий: " + String(r)
     );
 
