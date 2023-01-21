@@ -13,6 +13,9 @@
         width: 455px;
         height: 480px;
     }
+    .bsw-button>a{
+        font-size: 18px;
+    }
 }
 @media (max-width: 1202px) {
     .block-youGet-container>p{
@@ -62,7 +65,7 @@
 }
 @media (max-width: 950px){
     .bsw-text {
-        font-size: 15px;
+        font-size: 14px;
     }
     .bsw-button>p {
         font-size: 15px;
@@ -77,7 +80,7 @@
         font-size: 18px;
     }
     .with-text-will {
-        margin-top: 10px;
+        margin-top: 0px;
     }
     .with-card-title {
         height: 7%;
@@ -116,7 +119,7 @@
     }
     
     .bsw-text{
-        font-size: 14px;
+        font-size: 13px;
     }
     .bsw-title{
         font-size: 20px;
@@ -218,6 +221,9 @@
     }
 }
 @media (max-width: 774px) {
+    .bsw-topaz{
+        margin-top: 30px;
+    }
     .block-weDo{
         height: 1200px;
     }
@@ -228,7 +234,7 @@
         position: absolute;
         top: 0; 
         left: 80%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -65%);
     }
     .stories-img-all{
         top: 12% !important;
@@ -293,7 +299,9 @@
         padding: 10px 25px 10px 25px;
     }
     .block-why>p:last-child{
-        padding: 40px;
+        padding: 30px 10px 30px 10px;
+        font-size: 15px;
+        text-align: left;
     }
     .calc-line{
         display: none;
@@ -347,7 +355,7 @@
         width: 360px;
         height: 395px;
     }
-    .header-elements:nth-child(2)>p{
+    .header-elements:nth-child(2)>a{
         display: none;
     }
     .header-elements:nth-child(3)>a{
@@ -555,17 +563,20 @@
         height: 12%;
     }
     .with-main-text {
-        font-size: 15px;
+        font-size: 13px;
         line-height: 20px;
+        padding: 0 0 0 30px;
     }
     .with-text-will {
         font-size: 20px;
     }
     .with-dutation{
-        font-size: 20px;
+        font-size: 17px;
+        padding-bottom: 3px !important;
     }
     .with-price{
-        font-size: 20px;
+        padding-top: 5px !important;
+        font-size: 17px;
     }
     .block-with-elements:nth-child(1) {
         height: 20%;
@@ -579,6 +590,9 @@
     }
 }
 @media (max-width: 595px){
+    .bsw-title-trf{
+        transform: translateY(0);
+    }
     .block-last-el>img {
         width: 175px;
         height: 227px;
@@ -664,12 +678,13 @@
         width: 100px;
         height: 20px;
         margin-right: 25px;
+        transform: translate(-50%, -50%);
     }
     .bsw-title{
         font-size: 20px;
     }
     .bsw-text{
-        font-size: 15px;
+        font-size: 12px;
     }
     .block-team-elements:nth-child(1){
         font-size: 50px;
@@ -728,13 +743,33 @@
     .block-with{
         height: 800px;
     }
+    .footer-img{
+        width: 28%;
+    }
+    .footer-img>a>img {
+        width: 30px;
+        height: 30px;
+        
+    }
     
+}
+@media (max-width: 406px){
+    .bsw-button>a{
+        font-size: 13px;
+    }
 }
 @media (max-width: 380px){
     /* .block-stories-container{
         padding: 20px !important;
         height: 40px !important;
     } */
+    .bsw-five{
+        margin-top: 30px !important;
+    }
+    .bsw-topaz{
+        margin-top: 25px !important;
+        margin-right: 25px !important;
+    }
     .team-text>p{
         line-height: 23px;
         font-size: 13px;
@@ -767,17 +802,22 @@
         width: 90px;
         height: 18px;
         -webkit-box-pack: left;
-            -ms-flex-pack: left;
-                justify-content: left;
+        -ms-flex-pack: left;
+        justify-content: left;
+        left: 75%;
     }
     .block-stories-container-text{
         font-size: 15px;
     }
     .bsw-title{
         font-size: 17px;
+        line-height: 20px;
+        padding-top: 0;
     }
     .bsw-text{
         font-size: 13px;
+        line-height: 20px;
+        padding-top: 0;
     }
     .bsw-button>p{
         font-size: 14px;
@@ -803,10 +843,6 @@
             -ms-transform: translateY(31px);
                 transform: translateY(31px);
     }
-    .footer-img>a>img {
-        width: 30px;
-        height: 30px;
-    }
     .footer-element:nth-child(1)>img {
         width: 70px;
         height: 48px;
@@ -816,9 +852,6 @@
     }
     .block-why>p:first-child {
         font-size: 40px;
-    }
-    .block-why>p:last-child {
-        padding: 30px;
     }
     .block-nav-menu{
         font-size: 20px !important;

@@ -136,11 +136,12 @@ header{
     font-weight: 300;
     line-height: 25px;
 }
-.header-elements>p{
+.header-elements>a{
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
     cursor: pointer;
+    color: black;
 }
 
 .header-elements:nth-child(2){
@@ -149,11 +150,11 @@ header{
         -ms-flex-direction: row;
             flex-direction: row;
 }
-.header-elements>p:nth-child(2){
+.header-elements>a:nth-child(2){
     margin-left: 20px;
     margin-right: 20px;
 }
-.header-elements>p:hover{
+.header-elements>a:hover{
     color: var(--main-color);
 }
 
@@ -162,7 +163,7 @@ header{
     width: 74px;
     height: 52px;
 }
-.header-elements>a{
+.header-elements> .calculate{
     border-radius: 10px;
     
     padding-left: 20px;
@@ -176,10 +177,11 @@ header{
     background: linear-gradient(180deg, #DC1DFB 4.07%, #0BD2E0 124.63%);
     background: -webkit-linear-gradient(180deg, #DC1DFB 4.07%, #0BD2E0 124.63%);
 }
-.header-elements>a:hover{
+.header-elements>.calculate:hover{
     padding-left: 25px;
     padding-right: 25px;
     border-radius: 5px;
+    color: #fff;
 }
 .header-elements:nth-child(3){
     position: relative;
@@ -779,7 +781,9 @@ main{
     opacity: 0 !important;
     top: 50%;
     left: 50%;
-    z-index: 1;
+    z-index: 0;
+    height: 0 !important;
+    overflow: hidden;
 }
 .stories-button-active{
     background: linear-gradient(180deg, #dd1dfb 4.07%, #0bd2e0 124.63%) !important;
@@ -895,7 +899,6 @@ main{
     transition: .5s;
     cursor: pointer;
 }
-
 .block-stories-buttons-item:hover{
     opacity: 1;
 }
@@ -1042,8 +1045,8 @@ main{
     border-right: 10px solid #F3F8FE;
     border-radius: 10px;
     background-color: #F3F8FE;  
-    
 }
+
 .block-stories-wrapper{
     width: 100%;
     height: 100%;
@@ -1131,9 +1134,12 @@ main{
 .bsw-text{
     opacity: .7;
     padding: 10px;
-    font-size: 20px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 22px;
     z-index: 1;
+}
+.bsw-title-trf{
+    transform: translateY(-60px);
 }
 .bsw-button{
     position: absolute;
@@ -1153,12 +1159,11 @@ main{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    z-index: 1;
-    
+    z-index: 5;
 }
-.bsw-button>p{
-    font-size: 25px;
-    width: 70%;
+.bsw-button>a{
+    font-size: 20px;
+    width: 100%;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1173,13 +1178,18 @@ main{
     -o-transition: .3s;
     transition: .3s;
     cursor: pointer;
+    z-index: 1000;
+}
+.bsw-button>a:hover{
+    border-radius: 5px;
+    transform: scale(1.01);
 }
 .bsw-padding{
     padding: 0;
 }
-#bsw-font{
-    font-size: 13px;
-}
+/* #bsw-font{
+    font-size: 20px;
+} */
 .bsw-button>p:hover{
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -1405,6 +1415,7 @@ main{
     text-align: center;
     color: #000000;
     opacity: 0.7;
+    padding: 0px 15px 0px 15px;
 }
 .block-map-img{
     width: 100%;
@@ -1554,6 +1565,11 @@ main{
     border-radius: 25px;
     color: white;
     font-size: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+.with-card-button:hover{
+    border-radius: 15px;
 }
 .with-card-title>p{
     font-size: 27px;
@@ -1570,11 +1586,30 @@ main{
     font-weight: bold;
 }
 .with-main-text{
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     font-size: 15px;
     padding-top: 0;
     opacity: .7;
     line-height: 18px;
+    position: relative;
+}
+.curcle-text{
+    position: relative;
+}
+.curcle-text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translate(-300%, 50%);
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background-color: black;
 }
 .with-dutation{
     padding: 10px;
@@ -1597,7 +1632,7 @@ main{
     margin-right: 15px;
 }
 .bsw-five{
-    margin-top: 50px;
+    margin-top: 60px;
     margin-right: 50px;
     width: 100px !important;
     height: 100px !important;
@@ -1742,6 +1777,11 @@ main{
     color: #fff;
     text-align: center;
     margin-top: 30px;
+    transition: .3s;
+    cursor: pointer;
+}
+.calc-button:hover{
+    border-radius: 10px;
 }
 .calc-element:not(:first-child){
     margin-top: 10px;
@@ -1860,7 +1900,7 @@ footer{
             flex-direction: row;
 }
 .footer-img{
-    width: 100%;
+    width: 33.3%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1955,11 +1995,14 @@ footer{
 }
 
 form{
+    width: 80%;
+    max-width: 400px;
     z-index: 10001;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 
     border-top: solid 5px;
     border-bottom: solid 5px;
@@ -1969,6 +2012,9 @@ form{
     background-color: #f3f8fe;
     border-radius: 10px;
 
+}
+#NameForm, #NumberPhone{
+    width: 100%;
 }
 .form-border{
     width: 100%;
@@ -2014,6 +2060,6 @@ input::-webkit-input-placeholder {color: var(--main-color); opacity: .5;}
     position: absolute;
     top: 5%;
     left: 90%;
-
+    cursor: pointer;
     transform: translate(-50%, -50%);
 }
