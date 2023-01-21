@@ -191,6 +191,7 @@ let weDoItem = [];
 weDoItem = document.querySelectorAll('.block-weDo-item');
 document.body.addEventListener("scroll", function () {
 
+    if(!isMobile) return;
     if(this.scrollTop > blocksWeDo[0].scrollHeight){
         weDoItem[0].style.borderColor = "#F3F8FE";
     }
@@ -280,6 +281,12 @@ document.body.addEventListener("scroll", function () {
     }
     else{
         weDoItem[12].style.borderColor = "#F3F8FE00";
+    }
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 1100){
+        weDoItem[13].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[13].style.borderColor = "#F3F8FE00";
     }
 }, false);
 //
@@ -627,10 +634,12 @@ function updateblocksYouGetComp(){
 
     for(let i = 0; i < buttonsWith.length; i++){
         buttonsWith[i].classList.remove("with-button-active");
-        blocksWith[i].classList.remove("with-hide");
+        blocksWith[i].classList.add("with-hide");
     }
-    buttonsWith[0].classList.add("with-button-active");
-    buttonActiveWith = buttonsWith[0];
+    buttonsWith[3].classList.add("with-button-active");
+    blocksWith[3].classList.remove("with-hide");
+    buttonActiveWith = buttonsWith[3];
+    buttonidWith = 3;
 
     for(let i = 0; i < buttonsStories2.length; i++){
         buttonsStories2[i].style.opacity = '0.4';
@@ -662,9 +671,10 @@ function updateblocksYouGetMobile(){
         buttonsWith[i].classList.remove("with-button-active");
         blocksWith[i].classList.add("with-hide");
     }
-    buttonsWith[0].classList.add("with-button-active");
-    blocksWith[0].classList.remove("with-hide");
-    buttonActiveWith = buttonsWith[0];
+    buttonsWith[3].classList.add("with-button-active");
+    blocksWith[3].classList.remove("with-hide");
+    buttonActiveWith = buttonsWith[3];
+    buttonidWith = 3;
 
     for(let i = 0; i < buttonsTeam.length; i++){
         buttonsTeam[i].classList.remove("team-button-active");
