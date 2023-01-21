@@ -221,6 +221,7 @@
     }
 }
 @media (max-width: 774px) {
+    
     .bsw-topaz{
         margin-top: 30px;
     }
@@ -243,7 +244,7 @@
         top: 15% !important;
     }
     .block-team{
-        height: 800px;
+        height: 650px;
     }
     .block-last-el>img {
         width: 238px;
@@ -472,6 +473,7 @@
     }
     .block-stories-title {
         font-size: 70px;
+        padding: 20px;
     }
 
     .team-one{
@@ -701,6 +703,9 @@
     
 }
 @media (max-width: 500px) {
+    .block-map{
+        height: 430px;
+    }
     .block-nav-menu>p{
         font-size: 30px !important;
     }

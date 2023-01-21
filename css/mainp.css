@@ -34,6 +34,7 @@ body, html{
     width: 291px !important;
     height: 176px !important;
     transform: translate(-100%,-100%) !important;
+    left: 100% !important;
 }
 .load-block{
     width: 100%;
@@ -142,7 +143,6 @@ header{
     -o-transition: .3s;
     transition: .3s;
     cursor: pointer;
-    color: black;
 }
 
 .header-elements:nth-child(2){
@@ -350,7 +350,7 @@ main{
 /* Блок youGet */
 .block-youGet{
     width: 100%;
-    height: 600px;
+    height: 550px;
     
     position: relative;
 }
@@ -372,7 +372,7 @@ main{
     color: var(--main-color);
 }
 .block-youGet-elements:nth-child(2){ /* Блоки */
-    height: 55%;
+    height: 65%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1202,7 +1202,7 @@ main{
     height: 140px;
     position: absolute;
     top: 100%;
-    left: 100%;
+    left: 0;
     -webkit-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
             transform: translateY(-100%);
@@ -1214,7 +1214,7 @@ main{
     width: 100%;
     height: 800px;
     /* border: 1px solid red; */
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .block-team-elements{
@@ -1223,7 +1223,7 @@ main{
     
 }
 .block-team-elements:nth-child(1){ /* Text */
-    height: 30%;
+    height: 20%;
     font-size: 90px;
     color: var(--main-color);
     display: -webkit-box;
@@ -1256,7 +1256,7 @@ main{
             align-items: center;
 }
 .block-team-elements:nth-child(3){ /* Кнопки */
-    height: 10%;
+    height: 20%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1284,7 +1284,7 @@ main{
 }
 .block-team-card{
     width: 25%;
-    height: 90%;
+    height: 110%;
     border: 2px solid var(--main-color);
     border-radius: 10px;
     opacity: 1;

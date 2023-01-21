@@ -709,12 +709,8 @@ function updateblocksYouGetComp(){
 
     for(let i = 0; i < buttonsWith.length; i++){
         buttonsWith[i].classList.remove("with-button-active");
-        blocksWith[i].classList.add("with-hide");
+        blocksWith[i].classList.remove("with-hide");
     }
-    buttonsWith[3].classList.add("with-button-active");
-    blocksWith[3].classList.remove("with-hide");
-    buttonActiveWith = buttonsWith[3];
-    buttonidWith = 3;
 
     for(let i = 0; i < buttonsStories2.length; i++){
         buttonsStories2[i].style.opacity = '0.4';
