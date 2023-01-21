@@ -727,7 +727,7 @@ sendTg.addEventListener("click", function(e){
     info.elements.phoneE.value = "";
     area.value = "";
     formI.style.display = "none";
-    // задержу формы
+    // delay form
 })
 // https://api.telegram.org/bot715125500:5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I/sendMessage?chat_id=-1001212271187&parse_mode=HTML&text=test
 function sendMessage(text)
