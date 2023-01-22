@@ -40,7 +40,7 @@ body, html{
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 10000;
+    z-index: 400000;
     background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -51,10 +51,11 @@ body, html{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+}
+.load-block>img{
     -webkit-animation: load-anim 1s infinite linear;
             animation: load-anim 1s infinite linear;
 }
-
 @-webkit-keyframes load-anim {
     0%{
         -webkit-transform: scale(1.1);
@@ -92,9 +93,13 @@ header{
     height: 70px;
     position: fixed;
     background-color: rgb(255, 255, 255);
-    z-index: 10;
+    z-index: 300000;
     opacity: 1;
+    transition: .3s;
     
+}
+header:hover{
+    opacity: 1 !important;
 }
 .header-wrapper{
     width: 100%;
@@ -415,9 +420,9 @@ main{
         transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
     opacity: 1;
-    -webkit-transition: opacity .5s;
-    -o-transition: opacity .5s;
-    transition: opacity .5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
     width: 26%;
     height: 70%;
     border: 1px solid rgba(0, 91, 234, 0.4);
@@ -594,6 +599,42 @@ main{
     left: 40%;
 
 }
+
+.protect{
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+.protect>p{
+    font-size: 15px;
+    color: #005BEA;
+}
+.protect-s{
+    margin-top: 10px;
+    font-size: 10px !important;
+    color: rgba(0, 0, 0, 0.801) !important;
+}
+
+.show-item{
+    animation: anim-item 4s forwards;
+}
+
+@keyframes anim-item {
+    0%{
+        transform: scale(1) !important ;
+    }
+    50%{
+        transform: scale(1.1) !important;
+    }
+    100%{
+        transform: scale(1) !important;
+    }
+}
+
 .block-weDo-gradient2{
     width: 426px;
     height: 426px;
@@ -652,6 +693,7 @@ main{
 } */
 .weDo-hide{
     opacity: 0;
+    transition: .3s;
 }
 .weDo-button-active{
     background: linear-gradient(180deg, #dd1dfb 4.07%, #0bd2e0 124.63%) !important;
@@ -1140,9 +1182,9 @@ main{
     line-height: 22px;
     z-index: 1;
 }
-.bsw-title-trf{
+/* .bsw-title-trf{
     transform: translateY(-60px);
-}
+} */
 .bsw-button{
     position: absolute;
     top: 85%;

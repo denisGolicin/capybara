@@ -221,20 +221,39 @@
     }
 }
 @media (max-width: 774px) {
+    .block-weDo-item:first-child{
+        margin-top: 10px;
+    }
+    .block-weDo>p{
+        margin-bottom: 0px;
+    }
+    .bsw-five{
+        margin-top: 50px;
+        margin-right: 50px;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .container-text-display{
+        display: none;
+        
+    }
+    .bsw-padding{
+        height: 0px;
+    }
     .stories-bred-title{
         display: block;
     }
     .bsw-t-b{
-        padding-top: 37px;
+        padding-top: 40px !important;
     }
     .block-weDo-text>p{
         margin-left: 15px;
     }
     .bsw-topaz{
-        margin-top: 30px;
+        margin-top: 50px;
     }
     .block-weDo{
-        height: 1200px;
+        height: 1150px;
     }
     .block-stories-container{
         position: relative;
@@ -628,28 +647,21 @@
     .block-with-card{
         width: 60% !important;
     }
-    .bsw-five{
-        width: 50px !important;
-        height: 50px !important;
-        margin-right: 20px !important;
-        margin-top: 45px !important;
-    }
+    
     .bsw-img{
         width: 60px !important;
         height: 60px !important;
     }
     .bsw-topaz{
-        width: 100px !important;
-        height: 40px !important;
+        width: 89px !important;
+        height: 30px !important;
         margin-right: 30px !important;
         margin-top: 45px !important;
     }
     .block-youGet-container>p{
         font-size: 17px !important;
     }
-    .container-text-display{
-        display: none;
-    }
+    
     .bsw-button>p{
         font-size: 14px;
     }
@@ -774,18 +786,29 @@
     .bsw-button>a{
         font-size: 13px;
     }
+    .n-l-i{
+        height: 40px !important;
+        width: 40px !important;
+    }
 }
 @media (max-width: 380px){
     /* .block-stories-container{
         padding: 20px !important;
         height: 40px !important;
     } */
+    .bsw-t-b {
+        padding-top: 20px !important;
+    }
     .bsw-five{
         margin-top: 30px !important;
+        margin-left: 10px !important;
+        transform: translate(-30%, -55%) !important;
     }
     .bsw-topaz{
         margin-top: 25px !important;
-        margin-right: 25px !important;
+        margin-left: 25px !important;
+        transform: translate(-75%, -55%) !important;
+        
     }
     .team-text>p{
         line-height: 23px;
@@ -822,6 +845,7 @@
         -ms-flex-pack: left;
         justify-content: left;
         left: 75%;
+        transform: translate(-50%, -70%);
     }
     .block-stories-container-text{
         font-size: 15px;

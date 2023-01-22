@@ -17,6 +17,8 @@ let buttonidWith = 0;
 let buttonidStories2 = 0;
 let buttonActiveStories2;
 
+let hed = document.getElementsByTagName('header')[0];
+
 let buttonsYouGet = [];
 buttonsYouGet = document.querySelectorAll('.block-youGet-elements-curcle');
 
@@ -113,6 +115,7 @@ burger.addEventListener("click", function() {
     }
     else{
         burgerMenu.classList.add('burger-hide');
+        hed.style.opacity = ".4"
         burgerLine[0].classList.remove('line-up');
         burgerLine[1].classList.remove('line-border');
         burgerLine[2].classList.remove('line-down');
@@ -225,7 +228,6 @@ for(let i = 0; i < withButton.length; i++){
     
     withButton[i].addEventListener("click", function(){
         formI.style.display = 'block';
-        idWith = i + 1;
     })
 }
 closeForm.addEventListener("click", function(){
@@ -337,52 +339,61 @@ function handleTouchMove(evt) {
 
 let weDoItem = [];
 weDoItem = document.querySelectorAll('.block-weDo-item');
+
+
 document.body.addEventListener("scroll", function () {
+    if(this.scrollTop > 30){
+        hed.style.opacity = ".4"
+    }
+    else{
+        hed.style.opacity = "1"
+    }
 
     if(!isMobile) return;
     if(this.scrollTop > blocksWeDo[0].scrollHeight){
         weDoItem[0].style.borderColor = "#F3F8FE";
+        
     }
     else{
         weDoItem[0].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 100){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 50){
         weDoItem[1].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[1].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 300){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 150){
         weDoItem[2].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[2].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 400){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 250){
         weDoItem[3].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[3].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 350){
         weDoItem[4].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[4].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 800){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 450){
         weDoItem[5].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[5].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 1000){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
         weDoItem[6].style.borderColor = "#F3F8FE";
     }
     else{
@@ -396,41 +407,41 @@ document.body.addEventListener("scroll", function () {
         weDoItem[7].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 200){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 50){
         weDoItem[8].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[8].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 450){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 150){
         weDoItem[9].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[9].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 250){
         weDoItem[10].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[10].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 800){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 400){
         weDoItem[11].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[11].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 950){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 500){
         weDoItem[12].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[12].style.borderColor = "#F3F8FE00";
     }
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 1100){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
         weDoItem[13].style.borderColor = "#F3F8FE";
     }
     else{
@@ -695,20 +706,19 @@ sendTg.addEventListener("click", function(e){
         info.elements.phoneE.style.boxShadow = "none";
     }
     let str;
-    switch(idWith){
-        case 1:{
-            str = "Consultation";
-        }
-        case 2:{
-            str = "Cost Effective";
-        }
-        case 3:{
-            str = "Best Offer";
-        }
-        case 4:{
-            str = "Premium Service";
-        }
+    if(buttonidWith + 1 == 1){
+        str = "Consultation";
     }
+    if(buttonidWith + 1 == 2){
+        str = "Cost Effective";
+    }
+    if(buttonidWith + 1 == 3){
+        str = "Best Offer";
+    }
+    if(buttonidWith + 1 == 4){
+        str = "Premium Service";
+    }
+
 
     console.log(result);
     console.log(area.value);
