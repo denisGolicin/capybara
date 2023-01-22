@@ -342,12 +342,12 @@ weDoItem = document.querySelectorAll('.block-weDo-item');
 
 
 document.body.addEventListener("scroll", function () {
-    if(this.scrollTop > 30){
-        hed.style.opacity = ".4"
-    }
-    else{
-        hed.style.opacity = "1"
-    }
+    //if(this.scrollTop > 30){
+    //    hed.style.opacity = ".4"
+    //}
+    //else{
+    //    hed.style.opacity = "1"
+    //}
 
     if(!isMobile) return;
     if(this.scrollTop > blocksWeDo[0].scrollHeight){
