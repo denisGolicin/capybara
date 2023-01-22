@@ -65,7 +65,7 @@ let formI = document.getElementById('formI');
 let closeForm = document.getElementById('closeForm');
 let idWith;
 
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(){
 //     loadt = document.querySelector('.load-block');
 //     loadt.style.display = "none";
 
@@ -82,7 +82,7 @@ window.onload = function(){
         updateblocksYouGetComp();
         
     }
-}
+})
 
 
 window.addEventListener('resize', function() {
