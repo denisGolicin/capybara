@@ -2045,7 +2045,7 @@ footer{
     opacity: 1;
     transition: 2s;
 
-    z-index: 10000;
+    z-index: 500000;
     display: none;
     background-color: rgba(255, 255, 255, 0.959);
 }
@@ -2053,7 +2053,7 @@ footer{
 form{
     width: 80%;
     max-width: 400px;
-    z-index: 10001;
+    z-index: 500001;
     position: absolute;
     top: 50%;
     left: 50%;
