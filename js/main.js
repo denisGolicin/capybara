@@ -358,42 +358,42 @@ document.body.addEventListener("scroll", function () {
         weDoItem[0].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 50){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 150){
         weDoItem[1].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[1].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 150){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 250){
         weDoItem[2].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[2].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 250){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 350){
         weDoItem[3].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[3].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 350){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 450){
         weDoItem[4].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[4].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 450){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 550){
         weDoItem[5].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[5].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 700){
         weDoItem[6].style.borderColor = "#F3F8FE";
     }
     else{
@@ -407,41 +407,41 @@ document.body.addEventListener("scroll", function () {
         weDoItem[7].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 50){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 150){
         weDoItem[8].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[8].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 150){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 250){
         weDoItem[9].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[9].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 250){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 350){
         weDoItem[10].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[10].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 400){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 500){
         weDoItem[11].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[11].style.borderColor = "#F3F8FE00";
     }
 
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 500){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
         weDoItem[12].style.borderColor = "#F3F8FE";
     }
     else{
         weDoItem[12].style.borderColor = "#F3F8FE00";
     }
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 700){
         weDoItem[13].style.borderColor = "#F3F8FE";
     }
     else{
