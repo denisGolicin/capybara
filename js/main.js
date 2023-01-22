@@ -66,8 +66,8 @@ let closeForm = document.getElementById('closeForm');
 let idWith;
 
 window.onload = function(){
-    loadt = document.querySelector('.load-block');
-    loadt.style.display = "none";
+//     loadt = document.querySelector('.load-block');
+//     loadt.style.display = "none";
 
     if(window.matchMedia('(max-width: 774px)').matches) {
         isMobile = true;
