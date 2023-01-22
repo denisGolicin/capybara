@@ -66,6 +66,7 @@ let closeForm = document.getElementById('closeForm');
 let idWith;
 
 document.addEventListener("DOMContentLoaded", function(){
+        console.log("load");
 //     loadt = document.querySelector('.load-block');
 //     loadt.style.display = "none";
 
