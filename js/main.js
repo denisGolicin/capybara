@@ -66,9 +66,8 @@ let closeForm = document.getElementById('closeForm');
 let idWith;
 
 document.addEventListener("DOMContentLoaded", function(){
-        console.log("load");
-//     loadt = document.querySelector('.load-block');
-//     loadt.style.display = "none";
+    // loadt = document.querySelector('.load-block');
+    // loadt.style.display = "none";
 
     if(window.matchMedia('(max-width: 774px)').matches) {
         isMobile = true;
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function(){
         updateblocksYouGetMobile();
     }
     else{
-
+        blocksWeDo[1].classList.remove('weDo-hide');
         isMobile = false;
         isComp = true;
         updateblocksYouGetComp();
@@ -343,14 +342,14 @@ weDoItem = document.querySelectorAll('.block-weDo-item');
 
 
 document.body.addEventListener("scroll", function () {
-    //if(this.scrollTop > 30){
-    //    hed.style.opacity = ".4"
-    //}
-    //else{
-    //    hed.style.opacity = "1"
-    //}
 
     if(!isMobile) return;
+    if(this.scrollTop > 30){
+        hed.style.opacity = ".4"
+    }
+    else{
+        hed.style.opacity = "1"
+    }
     if(this.scrollTop > blocksWeDo[0].scrollHeight){
         weDoItem[0].style.borderColor = "#F3F8FE";
         
