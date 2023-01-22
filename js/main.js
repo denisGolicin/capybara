@@ -105,7 +105,7 @@ window.addEventListener('resize', function() {
 }, true);
 
 burger.addEventListener("click", function() {
-    console.log('burger')
+    console.log('burger click')
     if(burgerMenu.classList.contains('burger-hide')){
         burgerMenu.classList.remove('burger-hide');
 
@@ -147,7 +147,7 @@ for(let i = 0; i < buttonsTeam.length; i++){
         buttonActiveTeam = this;
         buttonidTeam = i;
 
-        console.log("click" + i)
+        console.log("Block Team click: " + i)
     })
 }
 let h = document.querySelector('.block-team');
@@ -260,7 +260,7 @@ for(let i = 0; i < buttonsYouGet.length; i++){
         buttonActive = this;
         buttonid = i;
 
-        console.log("click" + i)
+        console.log("Block youGet click: " + i)
     })
 }
 let xDown = null;                                                        
@@ -466,7 +466,7 @@ for(let i = 0; i < buttonsStories.length; i++){
         buttonActiveStories = this;
         buttonidStories = i;
 
-        console.log("click stories" + i)
+        console.log("Block stories click: " + i)
     })
 }
 
@@ -564,7 +564,7 @@ for(let i = 0; i < buttonsWith.length; i++){
         buttonActiveWith = this;
         buttonidWith = i;
 
-        console.log("click stories" + i)
+        console.log("Block With click: " + i)
     })
 }
 
@@ -690,7 +690,7 @@ sendTg.addEventListener("click", function(e){
 
 
     if(String(name).length < 5){
-        console.log('govno name')
+
         info.elements.namr.style.boxShadow = "0 0 5px red";
         return;
     }
@@ -698,7 +698,7 @@ sendTg.addEventListener("click", function(e){
         info.elements.namr.style.boxShadow = "none";
     }
     if(String(phone).length < 10){
-        console.log('govno phone')
+        
         info.elements.phoneE.style.boxShadow = "0 0 5px red";
         return;
     }
@@ -773,7 +773,7 @@ for(let i = 0; i < buttonsStories2.length; i++){
         buttonActiveStories2 = this;
         buttonidStories2 = i;
 
-        console.log("click stories2" + i)
+        console.log("Block stories of comp click: " + i)
     })
 }
 //
