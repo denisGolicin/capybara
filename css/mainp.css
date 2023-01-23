@@ -1852,7 +1852,7 @@ main{
     text-align: center;
 }
 .block-why>p:last-child{
-    font-size: 25px;
+    font-size: 20px;
     color: #005BEA;
     text-align: center;
     padding: 60px 100px 60px 100px;
@@ -2053,7 +2053,7 @@ footer{
 form{
     width: 80%;
     max-width: 400px;
-    z-index: 500001;
+    z-index: 10001;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2118,4 +2118,27 @@ input::-webkit-input-placeholder {color: var(--main-color); opacity: .5;}
     left: 90%;
     cursor: pointer;
     transform: translate(-50%, -50%);
+}
+
+.calculate-doc{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, 50%);
+
+    
+
+    padding: 15px 40px 15px 40px;
+    background: linear-gradient(180deg, #DC1DFB 4.07%, #0BD2E0 124.63%);
+    background: -webkit-linear-gradient(180deg, #DC1DFB 4.07%, #0BD2E0 124.63%);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.calculate-doc>a{
+    color:rgb(255, 255, 255);
+    font-family: "MullerLight";
 }
