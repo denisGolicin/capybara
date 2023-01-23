@@ -677,8 +677,8 @@ rad3.addEventListener("click", function(){
 let area = document.getElementById('area');
 
 let tg = {
-    token: "5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I", 
-    chat_id: "-1001212271187" 
+    token: "5833706867:AAFBzepOXSTn4CjUOkdS1A_tgeY2BrFVprY", 
+    chat_id: "-1001524111766" 
 }
 let sendTg = document.getElementById('sendTg');
 sendTg.addEventListener("click", function(e){
