@@ -2122,7 +2122,7 @@ input::-webkit-input-placeholder {color: var(--main-color); opacity: .5;}
 
 .calculate-doc{
     position: absolute;
-    top: 90%;
+    top: 86%;
     left: 50%;
     width: 80%;
     transform: translate(-50%, 50%);
