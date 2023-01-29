@@ -7,7 +7,7 @@
 
 @media (max-width: 1074px) {
 	.block-title-text>p{
-        font-size: 70px;
+        font-size: 10px;
     }
     .block-title-img>img {
         width: 455px;
@@ -896,5 +896,155 @@
     }
     .block-nav-menu{
         font-size: 20px !important;
+    }
+}
+
+@media (min-width: 1979px){
+    .header-elements{
+        font-size: 30px;
+    }
+    .block-youGet-content>p{
+        font-size: 30px !important;
+        padding-top: 5px;
+    }
+    .block-youGet-container>p{
+        padding: 20px;
+        font-size: 23px;
+    }
+    .block-youGet-img>img {
+        width: 25px;
+        height: 25px;
+    }
+    .block-youGet-img {
+        width: 60px;
+        height: 60px;
+    }
+    .block-youGet-content{
+        height: 35%;
+    }
+    .block-youGet{
+        height: 700px;
+    }
+    .block-weDo-text{
+        font-size: 26px;
+    }
+    .block-weDo-icon>img {
+        width: 65px;
+        height: 65px;
+        transform: translate(-50%, -110%);
+    }
+    .block-stories-buttons-icon>div {
+        width: 100px;
+        height: 27px;
+    }
+    .block-stories-buttons-text{
+        font-size: 55px;
+    }
+    .block-stories-buttons-item{
+        height: 20%;
+    }
+    .bsw-title{
+        font-size: 25px;
+        padding-left: 30px;
+        padding-right: 30px
+    }
+    .bsw-text{
+        font-size: 20px;
+        line-height: 26px;
+        padding-left: 30px;
+        padding-right: 30px
+    }
+    .bsw-button>a {
+        font-size: 25px;
+    }
+    .block-stories-container-text{
+        font-size: 25px;
+    }
+    .team-name{
+        font-size: 30px;
+    }
+    .team-text>p {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .block-map-title{
+        font-size: 30px;
+    }
+    .with-main-text {
+        padding: 0px 20px 0px 30px;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .with-text-will{
+        font-size: 25px;
+    }
+    .with-dutation{
+        font-size: 23px;
+    }
+    .with-price{
+        font-size: 23px;    
+    }
+    .with-card-button{
+        font-size: 25px;
+    }
+    .calculate-doc{
+        font-size: 25px;
+        
+    }
+    .block-why>p:last-child {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .block-last-el:first-child {
+        font-size: 50px;
+    }
+    .footer-element:nth-child(1)>img {
+        width: 130px;
+        height: 100px;
+    }
+    .footer-contacts-wrapper {
+        font-size: 30px;
+    }
+    .footer-img:nth-child(2){
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    header{
+        height: 100px;
+    }
+    .block-title {
+        margin-top: 100px;
+    }
+    form{
+        max-width: 600px;
+    }
+    input {
+        padding: 20px;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .form-border>p{
+        font-size: 23px !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .form-border>p:nth-child(1){
+        font-size: 35px !important;
+    }
+    .form-border>p:nth-child(2){
+        font-size: 27px !important;
+    }
+    fieldset>div>span{
+        font-size: 23px;
+    }
+    button{
+        font-size: 25px;
+    }
+    textarea {
+        padding: 20px;
+        font-size: 20px;
     }
 }

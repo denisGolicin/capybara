@@ -2124,7 +2124,7 @@ input::-webkit-input-placeholder {color: var(--main-color); opacity: .5;}
     position: absolute;
     top: 86%;
     left: 50%;
-    width: 80%;
+    width: 700px;
     transform: translate(-50%, 50%);
 
     
