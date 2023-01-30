@@ -221,6 +221,9 @@
     }
 }
 @media (max-width: 774px) {
+    .calculate-doc{
+        width: 290px;
+    }
     .block-weDo-item:first-child{
         margin-top: 10px;
     }
