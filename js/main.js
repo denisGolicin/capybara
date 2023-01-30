@@ -441,12 +441,12 @@ document.body.addEventListener("scroll", function () {
     else{
         weDoItem[12].style.borderColor = "#F3F8FE00";
     }
-    if(this.scrollTop > blocksWeDo[0].scrollHeight + 700){
-        weDoItem[13].style.borderColor = "#F3F8FE";
-    }
-    else{
-        weDoItem[13].style.borderColor = "#F3F8FE00";
-    }
+    // if(this.scrollTop > blocksWeDo[0].scrollHeight + 700){
+    //     weDoItem[13].style.borderColor = "#F3F8FE";
+    // }
+    // else{
+    //     weDoItem[13].style.borderColor = "#F3F8FE00";
+    // }
 }, false);
 //
 for(let i = 0; i < buttonsStories.length; i++){
