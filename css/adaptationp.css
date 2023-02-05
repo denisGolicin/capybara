@@ -249,9 +249,9 @@
     .bsw-t-b{
         padding-top: 40px !important;
     }
-    .block-weDo-text>p{
+    /* .block-weDo-text>p{
         margin-left: 15px;
-    }
+    } */
     .bsw-topaz{
         margin-top: 50px;
     }
@@ -934,7 +934,7 @@
     .block-weDo-icon>img {
         width: 65px;
         height: 65px;
-        transform: translate(-50%, -110%);
+        transform: translate(-150%, -110%);
     }
     .block-stories-buttons-icon>div {
         width: 100px;

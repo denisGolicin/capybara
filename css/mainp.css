@@ -148,6 +148,7 @@ header:hover{
     -o-transition: .3s;
     transition: .3s;
     cursor: pointer;
+    color: black;
 }
 
 .header-elements:nth-child(2){
@@ -767,7 +768,6 @@ main{
 }
 .block-weDo-text>p{
     transition: .5s;
-    margin-left: 40px;
 }
 .block-weDo-item-gradient{
     position: absolute;
