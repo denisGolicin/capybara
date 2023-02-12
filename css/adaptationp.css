@@ -785,6 +785,11 @@
     }
     
 }
+@media (max-width: 413px){
+     .block-title-text>p{
+	 font-size: 40px;
+     }
+}
 @media (max-width: 406px){
     .bsw-button>a{
         font-size: 13px;
