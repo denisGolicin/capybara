@@ -673,6 +673,23 @@ rad2.addEventListener("click", function(){
 rad3.addEventListener("click", function(){
     result = "Telegram";
 })
+let rateid = 0;
+document.querySelector('#consultation').addEventListener('click', function(){
+    rateid = 1;
+    console.log('1');
+})
+document.querySelector('#effective').addEventListener('click', function(){
+    rateid = 2;
+    console.log('2');
+})
+document.querySelector('#offer').addEventListener('click', function(){
+    rateid = 3;
+    console.log('3');
+})
+document.querySelector('#premium').addEventListener('click', function(){
+    rateid = 4;
+    console.log('4');
+})
 
 let area = document.getElementById('area');
 
@@ -706,16 +723,16 @@ sendTg.addEventListener("click", function(e){
         info.elements.phoneE.style.boxShadow = "none";
     }
     let str;
-    if(buttonidWith + 1 == 1){
+    if(rateid == 1){
         str = "Consultation";
     }
-    if(buttonidWith + 1 == 2){
+    if(rateid == 2){
         str = "Cost Effective";
     }
-    if(buttonidWith + 1 == 3){
+    if(rateid == 3){
         str = "Best Offer";
     }
-    if(buttonidWith + 1 == 4){
+    if(rateid == 4){
         str = "Premium Service";
     }
 
@@ -724,7 +741,7 @@ sendTg.addEventListener("click", function(e){
     console.log(area.value);
     let r = area.value;
     sendMessage(
-        "Заявка с сайта!\n" +
+        "Заявка с сайта capybara.one\n" +
         "Имя: " + String(name) + "\n" +
         "Телефон: " + String(phone) + "\n" +
         "Способ связи: " + String(result) + "\n" +
