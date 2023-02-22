@@ -695,7 +695,7 @@ let area = document.getElementById('area');
 
 let tg = {
     token: "5833706867:AAFBzepOXSTn4CjUOkdS1A_tgeY2BrFVprY", 
-    chat_id: "-1001524111766" 
+    chat_id: "-1001855113044" 
 }
 let sendTg = document.getElementById('sendTg');
 sendTg.addEventListener("click", function(e){
